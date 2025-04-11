@@ -6,23 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Loft Rooftop & Jacuzzi</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
     body {
-      font-family: Arial, sans-serif;
-      background: #fff8f6;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff8f6;
       color: #333;
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-    header {
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
+    header {
+      padding: 2rem 1rem 1rem;
+      background: white;
+    }
     .logo {
-      height: 180px;
+      height: 200px;
       margin: auto;
       animation: fadeIn 1.2s ease-out both;
     }
-
     .site-title {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
@@ -30,14 +31,10 @@
       color: #ff5a5f;
       font-weight: 600;
     }
-
     .subtitle {
       font-size: 1.1rem;
       color: #666;
       margin-bottom: 0.5rem;
-    }
-      height: 180px;
-      animation: fadeIn 1.2s ease-out both;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
@@ -45,7 +42,12 @@
     }
     .lang-select {
       text-align: center;
-      margin-top: 1rem;
+      margin: 1rem;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
     }
     .gallery {
       display: grid;
@@ -56,8 +58,8 @@
     .gallery img {
       width: 100%;
       border-radius: 12px;
-      transition: transform 0.3s ease;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
     }
     .gallery img:hover {
       transform: scale(1.05);
@@ -65,51 +67,53 @@
     }
     .button {
       display: inline-block;
-      background: #ff5a5f;
+      background-color: #ff5a5f;
       color: white;
       padding: 12px 24px;
-      text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
-      margin-top: 1rem;
+      text-decoration: none;
+      font-weight: 600;
     }
     footer {
       margin-top: 2rem;
-      text-align: center;
-      color: #777;
+      padding: 1rem;
       font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  
-<header>
-  <img src="logo_transparent_cleaned.png" alt="Logo Loft Rooftop & Jacuzzi" class="logo" />
-  <h1 class="site-title">Loft Rooftop & Jacuzzi</h1>
-  <p class="subtitle">Location saisonnière à Cannes – avec terrasse et jacuzzi privé</p>
-</header>
-
+  <header>
+    <img src="logo.png" alt="Logo Loft Rooftop & Jacuzzi" class="logo" />
+    <h1 class="site-title">Loft Rooftop & Jacuzzi</h1>
+    <p class="subtitle">Location saisonnière à Cannes – avec terrasse et jacuzzi privé</p>
+    <div class="lang-select">
+      <select onchange="setLanguage(this.value)">
+        <option value="fr">🇫🇷 Français</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="ru">🇷🇺 Русский</option>
+      </select>
+    </div>
+  </header>
 
   <main>
-    <h1 id="title"></h1>
+    <h2 id="title"></h2>
     <p id="location"></p>
-
     <section>
-      <h2 id="desc_title"></h2>
+      <h3 id="desc_title"></h3>
       <p id="description"></p>
       <ul id="features"></ul>
     </section>
-
     <section>
-      <h2 id="gallery_title"></h2>
-      <div class="gallery" id="gallery">
-        <!-- images inserted by JS -->
-      </div>
+      <h3 id="gallery_title"></h3>
+      <div class="gallery" id="gallery"></div>
     </section>
-
     <section>
-      <h2 id="reserve_title"></h2>
-      <a id="whatsapp_button" class="button" href="#" target="_blank"></a>
+      <h3 id="reserve_title"></h3>
+      <a class="button" id="whatsapp_button" target="_blank">WhatsApp</a>
     </section>
   </main>
 
@@ -121,7 +125,7 @@ const translations = {
     title: "Loft Rooftop & Jacuzzi",
     location: "Cannes centre - proche Croisette",
     desc_title: "Description",
-    description: "Ce petit coin de paradis est situé au dernier étage d’une maison typique Cannoise. Il possède une terrasse sur le toit avec un jacuzzi privé...",
+    description: "Ce petit coin de paradis est situé au dernier étage d’une maison typique Cannoise. Terrasse avec jacuzzi privé, transats, salon de jardin...",
     features: ["Capacité : 3 personnes", "Climatisation", "Wi-Fi haut débit", "Jacuzzi privé"],
     gallery_title: "Galerie photos",
     reserve_title: "Réserver par WhatsApp",
@@ -132,80 +136,32 @@ const translations = {
     title: "Loft Rooftop & Jacuzzi",
     location: "Downtown Cannes - near the Croisette",
     desc_title: "Description",
-    description: "This little paradise is on the top floor of a typical Cannes house. Rooftop terrace with jacuzzi, deck chairs, garden lounge...",
+    description: "This little paradise is located on the top floor of a typical Cannes house. Rooftop terrace with private jacuzzi...",
     features: ["Capacity: 3 people", "Air conditioning", "High-speed Wi-Fi", "Private jacuzzi"],
     gallery_title: "Photo Gallery",
     reserve_title: "Book via WhatsApp",
     whatsapp_button: "Message on WhatsApp",
     footer: "© 2024 Loft Rooftop & Jacuzzi – Cannes"
-  },
-  es: {
-    title: "Loft Rooftop & Jacuzzi",
-    location: "Centro de Cannes - cerca de la Croisette",
-    desc_title: "Descripción",
-    description: "Este pequeño paraíso está situado en la última planta de una casa típica de Cannes. Terraza en la azotea con jacuzzi privado...",
-    features: ["Capacidad: 3 personas", "Aire acondicionado", "Wi-Fi rápido", "Jacuzzi privado"],
-    gallery_title: "Galería de fotos",
-    reserve_title: "Reservar por WhatsApp",
-    whatsapp_button: "Escribir por WhatsApp",
-    footer: "© 2024 Loft Rooftop & Jacuzzi – Cannes"
-  },
-  de: {
-    title: "Loft Rooftop & Jacuzzi",
-    location: "Zentrum von Cannes – Nähe Croisette",
-    desc_title: "Beschreibung",
-    description: "Dieses kleine Paradies befindet sich im obersten Stockwerk eines typischen Hauses in Cannes. Dachterrasse mit Whirlpool...",
-    features: ["Kapazität: 3 Personen", "Klimaanlage", "Schnelles WLAN", "Privater Whirlpool"],
-    gallery_title: "Fotogalerie",
-    reserve_title: "Über WhatsApp reservieren",
-    whatsapp_button: "Auf WhatsApp schreiben",
-    footer: "© 2024 Loft Rooftop & Jacuzzi – Cannes"
-  },
-  it: {
-    title: "Loft Rooftop & Jacuzzi",
-    location: "Centro di Cannes - vicino alla Croisette",
-    desc_title: "Descrizione",
-    description: "Questo piccolo paradiso si trova all'ultimo piano di una casa tipica di Cannes. Terrazza panoramica con jacuzzi privata...",
-    features: ["Capacità: 3 persone", "Aria condizionata", "Wi-Fi veloce", "Jacuzzi privata"],
-    gallery_title: "Galleria fotografica",
-    reserve_title: "Prenota su WhatsApp",
-    whatsapp_button: "Scrivi su WhatsApp",
-    footer: "© 2024 Loft Rooftop & Jacuzzi – Cannes"
-  },
-  ru: {
-    title: "Лофт на крыше с джакузи",
-    location: "Центр Канн – рядом с Круазетт",
-    desc_title: "Описание",
-    description: "Этот уголок рая расположен на последнем этаже типичного дома в Каннах. Терраса с джакузи, шезлонги, зона отдыха...",
-    features: ["Вместимость: 3 человека", "Кондиционер", "Скоростной Wi-Fi", "Частное джакузи"],
-    gallery_title: "Фотогалерея",
-    reserve_title: "Забронировать через WhatsApp",
-    whatsapp_button: "Написать в WhatsApp",
-    footer: "© 2024 Лофт с джакузи на крыше – Канны"
   }
 };
 
 const images = ["IMG_2664.jpeg", "IMG_2669.jpeg", "IMG_2676.jpeg", "IMG_2678.jpeg", "IMG_6533.jpeg", "IMG_6550.jpeg", "IMG_8219.jpeg"];
 
 function setLanguage(lang) {
-  console.log('Langue sélectionnée :', lang);
-  const t = translations[lang];
+  const t = translations[lang] || translations['fr'];
   document.getElementById('title').innerText = t.title;
   document.getElementById('location').innerText = t.location;
   document.getElementById('desc_title').innerText = t.desc_title;
   document.getElementById('description').innerText = t.description;
-  document.getElementById('features').innerHTML = t.features.map(f => `<li>${f}</li>`).join('');
+  document.getElementById('features').innerHTML = t.features.map(f => `<li>$<_io.TextIOWrapper name='/mnt/data/final_unified/index.html' mode='w' encoding='utf-8'></li>`).join('');
   document.getElementById('gallery_title').innerText = t.gallery_title;
   document.getElementById('reserve_title').innerText = t.reserve_title;
   document.getElementById('whatsapp_button').innerText = t.whatsapp_button;
   document.getElementById('whatsapp_button').href = "https://wa.me/33677849362?text=" + encodeURIComponent(t.whatsapp_button + " - " + t.title);
-  document.getElementById('footer').innerText = t.footer;
-
   const gallery = document.getElementById('gallery');
-  gallery.innerHTML = images.map(img => `<img src="images/${img}" alt="Loft photo" />`).join('');
+  gallery.innerHTML = images.map(img => `<img src="images/${img}" alt="Photo" />`).join('');
 }
 
-// Langue par défaut
 setLanguage('fr');
 </script>
 </body>
