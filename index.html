@@ -1,11 +1,12 @@
 
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Loft Rooftop & Jacuzzi</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loft Rooftop &amp; Jacuzzi</title>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
     body {
       font-family: 'Inter', sans-serif;
@@ -74,14 +75,6 @@
       text-decoration: none;
       font-weight: 600;
     }
-    .reviews {
-      margin-top: 3rem;
-      text-align: left;
-      font-size: 1.1rem;
-    }
-    .review {
-      margin-bottom: 1.5rem;
-    }
     footer {
       margin-top: 2rem;
       padding: 1rem;
@@ -91,72 +84,100 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo Loft Rooftop & Jacuzzi" class="logo" />
-    <h1 class="site-title">Loft Rooftop & Jacuzzi</h1>
-    <p class="subtitle">Location saisonnière à Cannes – avec terrasse et jacuzzi privé</p>
-    <div class="lang-select">
-      <select onchange="setLanguage(this.value)">
-        <option value="fr">🇫🇷 FR</option>
-        <option value="en">🇬🇧 EN</option>
-        <option value="es">🇪🇸 ES</option>
-        <option value="de">🇩🇪 DE</option>
-        <option value="it">🇮🇹 IT</option>
-        <option value="ru">🇷🇺 RU</option>
-      </select>
-    </div>
-  </header>
-
-  <main>
-    <h2 id="title"></h2>
-    <p id="location"></p>
-    <section>
-      <h3 id="desc_title"></h3>
-      <p id="description"></p>
-      <ul id="features"></ul>
-    </section>
-    <section>
-      <h3 id="gallery_title"></h3>
-      <div class="gallery" id="gallery"></div>
-    </section>
-    <section>
-      <h3 id="reserve_title"></h3>
-      <a class="button" id="whatsapp_button" target="_blank">WhatsApp</a>
-    </section>
-
-    <!-- Section Avis -->
-    <section class="reviews">
-      <h3>Avis clients</h3>
-      <div class="review">
-        <strong>Camille (2 ans sur Airbnb)</strong><br>
-        Évaluation: ⭐⭐⭐⭐⭐<br>
-        "Juste parfait !"
-      </div>
-      <div class="review">
-        <strong>Malvina (2 ans sur Airbnb)</strong><br>
-        Évaluation: ⭐⭐⭐⭐⭐<br>
-        "Emma a été une excellente hôte ! Chaleureuse, accueillante et gentille ! La communication est rapide et efficace, au moindre problème Emma nous répond rapidement. Pour ce qui est de l'appartement celui-ci est conforme aux photos et à la description. L'accès est simple, on est pas loin de tout et c'est vraiment pratique. L'appartement est nickel, propre et très bien rangé! Le jacuzzi est parfait aussi pour un moment de relaxation! Je recommande fortement ce logement pour un bon petit séjour à Cannes. Je vous remercie encore une fois Emma pour votre gentillesse🤍☺️"
-      </div>
-      <div class="review">
-        <strong>FredSonia (8 ans sur Airbnb)</strong><br>
-        Évaluation: ⭐⭐⭐⭐⭐<br>
-        "Très bon emplacement, logement impeccable. Seul bémol pour accéder au spa sur la terrasse , escalier en colimaçon (j’ai le vertige et un pied qui vient d’être opéré). Mais sinon tout est top top. On recommande fortement. Et personne d'une grande gentillesse."
-      </div>
-      <!-- Ajout de plus d'avis en suivant la même structure -->
-      <div class="review">
-        <strong>Axel (8 ans sur Airbnb)</strong><br>
-        Évaluation: ⭐⭐⭐⭐⭐<br>
-        "Emma est une super hôte, très réactive et impliquée. Son logement est agréable pour 2 personnes et le coin très paisible. je recommande."
-      </div>
-      <!-- Plus d'avis ici -->
-      <!-- Il est possible de continuer à ajouter les avis dans ce format -->
-    </section>
-  </main>
-
-  <footer id="footer"></footer>
-
+<header>
+<img alt="Logo Loft Rooftop &amp; Jacuzzi" class="logo" src="logo.png"/>
+<h1 class="site-title">Loft Rooftop &amp; Jacuzzi</h1>
+<p class="subtitle">Location saisonnière à Cannes – avec terrasse et jacuzzi privé</p>
+<div class="lang-select">
+<select onchange="setLanguage(this.value)">
+<option value="fr">🇫🇷 FR</option>
+<option value="en">🇬🇧 EN</option>
+<option value="es">🇪🇸 ES</option>
+<option value="de">🇩🇪 DE</option>
+<option value="it">🇮🇹 IT</option>
+<option value="ru">🇷🇺 RU</option>
+</select>
+</div>
+</header>
+<main>
+<h2 id="title"></h2>
+<p id="location"></p>
+<section>
+<h3 id="desc_title"></h3>
+<p id="description"></p>
+<ul id="features"></ul>
+</section>
+<section>
+<h3 id="gallery_title"></h3>
+<div class="gallery" id="gallery"></div>
+</section>
+<section>
+<h3 id="reserve_title"></h3>
+<a class="button" id="whatsapp_button" target="_blank">WhatsApp</a>
+</section>
+</main>
+<footer id="footer"></footer>
 <script>
-const translations = {"fr": {"title": "Loft Rooftop & Jacuzzi", "location": "Cannes centre - proche Croisette", "desc_title": "Description", "description": "Ce petit coin de paradis est situé au dernier étage d’une maison typique Cannoise. Terrasse avec jacuzzi privé, transats, salon de jardin...", "features": ["Capacité : 3 personnes", "Climatisation", "Wi-Fi haut débit", "Jacuzzi privé"], "gallery_title": "Galerie photos", "reserve_title": "Réserver par WhatsApp", "whatsapp_button": "Écrire sur WhatsAp...
+const translations = {"fr": {"title": "Loft Rooftop & Jacuzzi", "location": "Cannes centre - proche Croisette", "desc_title": "Description", "description": "Ce petit coin de paradis est situé au dernier étage d’une maison typique Cannoise. Terrasse avec jacuzzi privé, transats, salon de jardin...", "features": ["Capacité : 3 personnes", "Climatisation", "Wi-Fi haut débit", "Jacuzzi privé"], "gallery_title": "Galerie photos", "reserve_title": "Réserver par WhatsApp", "whatsapp_button": "Écrire sur WhatsApp", "footer": "© 2024 Loft Rooftop & Jacuzzi – Cannes"}, "en": {"title": "Loft Rooftop & Jacuzzi", "location": "Downtown Cannes - near the Croisette", "desc_title": "Description", "description": "This little paradise is located on the top floor of a typical Cannes house. Rooftop terrace with private jacuzzi...", "features": ["Capacity: 3 people", "Air conditioning", "High-speed Wi-Fi", "Private jacuzzi"], "gallery_title": "Photo Gallery", "reserve_title": "Book via WhatsApp", "whatsapp_button": "Message on WhatsApp", "footer": "© 2024 Loft Rooftop & Jacuzzi – Cannes"}, "es": {"title": "Loft Rooftop & Jacuzzi", "location": "Centro de Cannes - cerca de la Croisette", "desc_title": "Descripción", "description": "Este pequeño paraíso está situado en la última planta de una casa típica de Cannes. Terraza en la azotea con jacuzzi privado...", "features": ["Capacidad: 3 personas", "Aire acondicionado", "Wi-Fi rápido", "Jacuzzi privado"], "gallery_title": "Galería de fotos", "reserve_title": "Reservar por WhatsApp", "whatsapp_button": "Escribir por WhatsApp", "footer": "© 2024 Loft Rooftop & Jacuzzi – Cannes"}, "de": {"title": "Loft Rooftop & Jacuzzi", "location": "Zentrum von Cannes – Nähe Croisette", "desc_title": "Beschreibung", "description": "Dieses kleine Paradies befindet sich im obersten Stockwerk eines typischen Hauses in Cannes. Dachterrasse mit Whirlpool...", "features": ["Kapazität: 3 Personen", "Klimaanlage", "Schnelles WLAN", "Privater Whirlpool"], "gallery_title": "Fotogalerie", "reserve_title": "Über WhatsApp reservieren", "whatsapp_button": "Auf WhatsApp schreiben", "footer": "© 2024 Loft Rooftop & Jacuzzi – Cannes"}, "it": {"title": "Loft Rooftop & Jacuzzi", "location": "Centro di Cannes - vicino alla Croisette", "desc_title": "Descrizione", "description": "Questo piccolo paradiso si trova all'ultimo piano di una casa tipica di Cannes. Terrazza panoramica con jacuzzi privata...", "features": ["Capacità: 3 persone", "Aria condizionata", "Wi-Fi veloce", "Jacuzzi privata"], "gallery_title": "Galleria fotografica", "reserve_title": "Prenota su WhatsApp", "whatsapp_button": "Scrivi su WhatsApp", "footer": "© 2024 Loft Rooftop & Jacuzzi – Cannes"}, "ru": {"title": "Лофт на крыше с джакузи", "location": "Центр Канн – рядом с Круазетт", "desc_title": "Описание", "description": "Этот уголок рая расположен на последнем этаже типичного дома в Каннах. Терраса с джакузи, шезлонги, зона отдыха...", "features": ["Вместимость: 3 человека", "Кондиционер", "Скоростной Wi-Fi", "Частное джакузи"], "gallery_title": "Фотогалерея", "reserve_title": "Забронировать через WhatsApp", "whatsapp_button": "Написать в WhatsApp", "footer": "© 2024 Лофт с джакузи на крыше – Канны"}};
+const images = ["IMG_2664.jpeg", "IMG_2669.jpeg", "IMG_2676.jpeg", "IMG_2678.jpeg", "IMG_6533.jpeg", "IMG_6550.jpeg", "IMG_8219.jpeg"];
+
+function setLanguage(lang) {
+  const t = translations[lang] || translations['fr'];
+  document.getElementById('title').innerText = t.title;
+  document.getElementById('location').innerText = t.location;
+  document.getElementById('desc_title').innerText = t.desc_title;
+  document.getElementById('description').innerText = t.description;
+  document.getElementById('features').innerHTML = t.features.map(f => `<li>${f}</li>`).join('');
+  document.getElementById('gallery_title').innerText = t.gallery_title;
+  document.getElementById('reserve_title').innerText = t.reserve_title;
+  document.getElementById('whatsapp_button').innerText = t.whatsapp_button;
+  document.getElementById('whatsapp_button').href = "https://wa.me/33677849362?text=" + encodeURIComponent(t.whatsapp_button + " - " + t.title);
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = images.map(img => `<img src="images/${img}" alt="Photo" />`).join('');
+}
+
+setLanguage('fr');
 </script>
+
+<section id="avis">
+<h2>Avis de nos hôtes</h2>
+<div class="review">
+<p><strong>Camille</strong><br/>Évaluation: 5 étoiles<br/>Il y a 1 semaine<br/>Juste parfait.</p>
+</div>
+<div class="review">
+<p><strong>Malvina</strong><br/>Évaluation: 5 étoiles<br/>Il y a 1 semaine<br/>Emma a été une excellente hôte ! La communication est rapide et efficace, et l'appartement est impeccable. Je recommande fortement ce logement.</p>
+</div>
+<div class="review">
+<p><strong>FredSonia</strong><br/>Évaluation: 5 étoiles<br/>Il y a 1 semaine<br/>Logement impeccable, très bon emplacement.</p>
+</div>
+<div class="review">
+<p><strong>Axel</strong><br/>Évaluation: 5 étoiles<br/>Il y a 2 semaines<br/>Emma est une super hôte, très réactive et impliquée. Je recommande.</p>
+</div>
+<div class="review">
+<p><strong>Marie</strong><br/>Évaluation: 5 étoiles<br/>Il y a 3 semaines<br/>Super séjour, appartement impeccable, à proximité de tout !</p>
+</div>
+<div class="review">
+<p><strong>Matteo</strong><br/>Évaluation: 5 étoiles<br/>Il y a 3 semaines<br/>Au top.</p>
+</div>
+<div class="review">
+<p><strong>Daniel</strong><br/>Évaluation: 5 étoiles<br/>Il y a 4 semaines<br/>Superbe appartement à quelques minutes du centre-ville de Cannes.</p>
+</div>
+<div class="review">
+<p><strong>Gabrielle</strong><br/>Évaluation: 5 étoiles<br/>mars 2025<br/>Merci Emma pour ce séjour très agréable. Le jacuzzi privé sur la terrasse est parfait pour se détendre après une longue journée.</p>
+</div>
+<div class="review">
+<p><strong>Natalia</strong><br/>Évaluation: 5 étoiles<br/>février 2025<br/>Merci beaucoup, Emma, de nous avoir permis de vivre avec nos deux labradors ! L'appartement est confortable et bien situé.</p>
+</div>
+<div class="review">
+<p><strong>Ewan</strong><br/>Évaluation: 5 étoiles<br/>février 2025<br/>Le logement était très beau et impeccable. Merci pour cette belle expérience !</p>
+</div>
+<div class="review">
+<p><strong>Soleda</strong><br/>Évaluation: 5 étoiles<br/>février 2025<br/>Logement propre, bien placé, jacuzzi chauffé prêt à l'emploi.</p>
+</div>
+<div class="review">
+<p><strong>Mélanie</strong><br/>Évaluation: 5 étoiles<br/>janvier 2025<br/>Merci Emma pour cet appartement agréable, et pour la belle expérience dans le jacuzzi privé.</p>
+</div>
+<!-- Plus d'avis peuvent être ajoutés ici -->
+</section>
 </body>
 </html>
