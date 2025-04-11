@@ -6,48 +6,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Loft Rooftop & Jacuzzi - Cannes</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
     body {
-      font-family: sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background: #f9f9f9;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff8f6;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+
+    header {
+      background-color: #fff;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #eee;
       text-align: center;
-      font-size: 2.5rem;
     }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #ff5a5f;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      color: #484848;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
-      margin-top: 2rem;
     }
+
     .gallery img {
       width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-    .section {
-      margin-top: 2rem;
-    }
-    a.button {
+
+    .button {
       display: inline-block;
-      background: #007bff;
+      background-color: #ff5a5f;
       color: white;
-      padding: 0.8rem 1.5rem;
+      padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
-      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
 <body>
-  <h1>Loft Rooftop & Jacuzzi</h1>
-  <p style="text-align:center;">Cannes, centre-ville – proche Croisette</p>
 
-  <div class="section">
+<header>
+  <h1>Loft Rooftop & Jacuzzi</h1>
+  <p>Cannes centre - proche Croisette</p>
+</header>
+
+<main>
+  <section>
     <h2>Description</h2>
     <p>Ce petit coin de paradis est situé au dernier étage d’une maison typique Cannoise. Il possède une terrasse sur le toit avec un jacuzzi privé, des transats, et un salon de jardin pour profiter du soleil de la Côte d’Azur ☀️🕶</p>
     <ul>
@@ -56,29 +106,31 @@
       <li>Wi-Fi haut débit</li>
       <li>Jacuzzi privé</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>Galerie</h2>
+  <section>
+    <h2>Galerie photos</h2>
     <div class="gallery">
-      <img src="images/IMG_2664.jpeg" alt="Photo du loft"/>
-      <img src="images/IMG_2669.jpeg" alt="Photo du loft"/>
-      <img src="images/IMG_2676.jpeg" alt="Photo du loft"/>
-      <img src="images/IMG_2678.jpeg" alt="Photo du loft"/>
-      <img src="images/IMG_6533.jpeg" alt="Photo du loft"/>
-      <img src="images/IMG_6550.jpeg" alt="Photo du loft"/>
-      <img src="images/IMG_8219.jpeg" alt="Photo du loft"/>
+<img src="images/IMG_2664.jpeg" alt="Photo du loft" />
+<img src="images/IMG_2669.jpeg" alt="Photo du loft" />
+<img src="images/IMG_2676.jpeg" alt="Photo du loft" />
+<img src="images/IMG_2678.jpeg" alt="Photo du loft" />
+<img src="images/IMG_6533.jpeg" alt="Photo du loft" />
+<img src="images/IMG_6550.jpeg" alt="Photo du loft" />
+<img src="images/IMG_8219.jpeg" alt="Photo du loft" />
 
     </div>
-  </div>
+  </section>
 
-  <div class="section">
-    <h2>Réservation</h2>
-    <a class="button" href="https://www.airbnb.fr/calendar/ical/52447592.ics?s=a54c2f493d7e3657467ad8412ffd4c1d" target="_blank">Voir le calendrier Airbnb</a>
-  </div>
+  <section>
+    <h2>Réserver par WhatsApp</h2>
+    <a class="button" href="https://wa.me/33677849362?text=Bonjour%20je%20souhaite%20réserver%20le%20Loft%20Rooftop%20%26%20Jacuzzi%20à%20Cannes" target="_blank">Écrire sur WhatsApp</a>
+  </section>
+</main>
 
-  <footer style="text-align:center; margin-top: 3rem; font-size: 0.9rem; color: #777;">
-    © 2024 Loft Rooftop & Jacuzzi – Cannes
-  </footer>
+<footer>
+  © 2024 Loft Rooftop & Jacuzzi – Cannes
+</footer>
+
 </body>
 </html>
