@@ -188,6 +188,7 @@ const translations = {
 const images = ["IMG_2664.jpeg", "IMG_2669.jpeg", "IMG_2676.jpeg", "IMG_2678.jpeg", "IMG_6533.jpeg", "IMG_6550.jpeg", "IMG_8219.jpeg"];
 
 function setLanguage(lang) {
+  console.log('Langue sélectionnée :', lang);
   const t = translations[lang];
   document.getElementById('title').innerText = t.title;
   document.getElementById('location').innerText = t.location;
